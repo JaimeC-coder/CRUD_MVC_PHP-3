@@ -1,0 +1,38 @@
+/**insertar un registro**/
+ $crud->insert([
+    
+     "nombres"=>"juan",
+     "apellidos"=>"perez",
+     "edad"=>23,
+     "correo"=>"centurinjaime@gmail.com",
+     "telefono"=>"123456789",
+     "fecha_registro"=>date("Y-m-d H:i:s")
+
+]);
+
+/** Editar registro con una condicion **/
+id= llave
+= = es el comparador 
+2 = es el valor de la condicion
+ $filas=$crud->where("id", "=", 2)->update([
+     "nombres" => "jose12"
+ ]);
+
+ /**Eliminar un registro con una condicion**/
+ es igual que el editar pero con la diferencia de que no se mandan datos 
+ 
+ $filas=$crud->where("id", "=", 3)->delete();
+
+
+
+
+ /**otra forma de insertar**/
+
+ $modeloUsuario = new Usuarios();->llamas a tu modelo 
+$modeloUsuario->setNombres("Juan");
+$modeloUsuario->setApellidos("Perez");
+$modeloUsuario->setEdad(20);
+$modeloUsuario->setCorreo("centurionjaime@gmail.com");
+$modeloUsuario->setTelefono("829-829-829");
+$modeloUsuario->setFecha_registro(date("Y-m-d"));
+$modeloUsuario->insert();
